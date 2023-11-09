@@ -64,7 +64,6 @@ The Book Bibliophile Blog API is a robust and scalable API designed for managing
 ### Users
 
 - `GET /users`: Retrieve all users (admin access required).
-- `GET /users/:id`: Retrieve a specific user by ID (admin access required).
 - `PUT /users/:id`: Update a user's information (admin access required).
 - `DELETE /users/:id`: Delete a user (admin access required).
 
