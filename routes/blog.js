@@ -36,12 +36,13 @@ router.get(
     // passport.authenticate("jwt", { session: false }),
     postController.recent_posts
 );
+
 // get a particular post
 router.get( "/posts/:id", postController.post_get );
 
-// POST OPERATIONS FOR ADMIN
-
 router.get("/images/:id", postController.image_get)
+
+// POST OPERATIONS FOR ADMIN
 
 router.get(
     "/posts-admin",
@@ -56,10 +57,8 @@ router.get(
     postController.public_posts
 );
 
-
-
 router.post(
-    "/posts/create",
+    "/posts",
     passport.authenticate("jwt", { session: false }),
     onlyAdmin,
     upload.single("image"),
@@ -81,6 +80,13 @@ router.delete(
     postController.post_delete
 );
 
+router.get(
+    "/posts/:id/comments",
+    passport.authenticate("jwt", { session: false }),
+    onlyAdmin,
+    commentController.comment_get
+);
+
 
 
 
@@ -99,13 +105,6 @@ router.post(
 );
 
 // COMMENT OPERATIONS FOR ADMIN
-
-router.get(
-    "/posts/:id/comments",
-    passport.authenticate("jwt", { session: false }),
-    onlyAdmin,
-    commentController.comment_get
-);
 
 router.put(
     "/comments/:id",
@@ -142,7 +141,7 @@ router.get( "/topics/:id", topicController.topic_get );
 // TOPIC OPERATIONS FOR ADMIN
 
 router.post(
-    "/topics/create",
+    "/topics",
     passport.authenticate("jwt", { session: false }),
     onlyAdmin,
     topicController.topic_create
