@@ -82,8 +82,13 @@ Request data is validated using middleware to ensure data integrity and consiste
 
 ## Security
 
-The API implements security measures to protect user data and prevent common security vulnerabilities. It includes password hashing with bcrypt, CSRF protection, and rate limiting.
+The API implements security measures to protect user data and prevent common security vulnerabilities. It includes password hashing with bcrypt.
 
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+
+
+
+Developed by __Samuel Ilenloa__
