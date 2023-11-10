@@ -18,8 +18,8 @@ Other Libraries:
    - [multer-gridfs-storage](https://github.com/devconcept/multer-gridfs-storage)
    - [passport-js](https://github.com/jaredhanson/passport-github)
    - [passport-jwt](https://github.com/mikenicholson/passport-jwt)
-   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)https://github.com/kelektiv/node.bcrypt.js)
-   - [bcrypt](
+   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
+   - [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 
 ## Installation
 
