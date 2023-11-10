@@ -2,6 +2,25 @@
 
 The Book Bibliophile Blog API is a robust and scalable API designed for managing a blog. It provides a comprehensive set of endpoints for creating, reading, updating, and deleting blog posts, as well as user authentication and authorization.
 
+
+## Built With
+
+NodeJS
+
+ExpressJS
+
+MongoDB
+
+Mongoose
+
+Other Libraries:
+   - [multer](https://github.com/expressjs/multer)
+   - [multer-gridfs-storage](https://github.com/devconcept/multer-gridfs-storage)
+   - [passport-js](https://github.com/jaredhanson/passport-github)
+   - [passport-jwt](https://github.com/mikenicholson/passport-jwt)
+   - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)https://github.com/kelektiv/node.bcrypt.js)
+   - [bcrypt](
+
 ## Installation
 
 1. Clone the repository:
