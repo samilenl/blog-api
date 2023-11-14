@@ -103,7 +103,7 @@ const admin_login = asyncHandler(async(req, res, next) => {
         id: user._id.toString(),
         email: user.email
     }
-    const token = jwt.sign(payload, "SecretKey", { expiresIn: "1d" })
+    const token = jwt.sign(payload, process.env.SECRET_KEY, { expiresIn: "1d" })
     res.json({user, token})
 })
 
