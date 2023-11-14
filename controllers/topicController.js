@@ -40,7 +40,7 @@ const topic_update = asyncHandler(async(req, res, next) => {
 const topic_get = asyncHandler(async(req, res, next) => {
     try {
         const topic = await Topic.findOne({_id: req.params.id})
-        const postWithTopic = await Post.find({topics: req.params.id})
+        const postWithTopic = await Post.find({topics: req.params.id, published: true})
         if (topic) {
             res.json({topic, postWithTopic})
         }
