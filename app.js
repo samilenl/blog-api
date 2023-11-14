@@ -8,6 +8,13 @@ const passport = require("passport")
 const connectDB = require("./configs/connectDB")
 const strategy = require("./configs/passportJwtStrategy")
 
+
+
+const compression = require("compression");
+const helmet = require("helmet");
+const RateLimit = require("express-rate-limit");
+
+
 const blogRouter = require("./routes/blog")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -32,6 +39,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+
+app.use(compression());
+app.use(helmet());
+const limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 25,
+});
+app.use(limiter);
+
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors());
